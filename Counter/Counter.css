@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 4fr 2fr 4fr;
+  font-size: 24px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 35px;
+  padding: 20px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.operations {
+  display: flex;
+  align-self: flex-start;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 1rem;
+  transition: all 0.3s linear;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:not(:first-of-type) {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.btn:hover {
+  background-color: royalblue;
+  color: white;
+  font-weight: 500;
+}
+
+.actual-num {
+    font-size: 40px;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
