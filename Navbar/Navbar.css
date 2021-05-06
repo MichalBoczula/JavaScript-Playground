@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: lightgrey;
+  color: rgb(66, 66, 66);
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+  background-color: red;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 3px 15px 5px rgba(0, 0, 0, 0.75);
+  position: fixed;
+}
+
+.ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.brand {
+  font-size: 1.7rem;
+  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.links {
+  width: 60%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link {
+  width: 20%;
+  transition: color 0.3s linear;
+}
+
+.brandSpan {
+  color: rgb(89, 89, 236);
+}
+
+.link:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.socials {
+  width: 30%;
+}
+
+.socialLink {
+  width: 33%;
+  color: rgb(89, 89, 236);
+  transition: color 0.3s linear;
+}
+
+.socialLink:hover {
+  cursor: pointer;
+  color: rgb(74, 153, 243);
+}
+
+@media (max-width: 800px) {
+	.links {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 70px;
+		background-color: white;
+		width: 100vw;
+		padding: 0px;
+		height: 0px;
+		transition: all 0.5s linear;
+		overflow: hidden;
+	}
+
+	.socials {
+		width: 60%;
+		margin: auto;
+		padding: 0px;
+	}
+
+	.socialLink {
+		text-align: center;
+	}
+
+	.active{
+		height: 300px;
+	}
+
+	.link {
+		padding: 10px;
+		width: 100%;
+		border-bottom: rgb(66, 66, 66) 3px solid;
+		transition: all 0.3s linear;
+	}
+
+	.link:hover{
+		border-bottom: cornflowerblue 3px solid;
+	}
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-top: 7px;
+  }
+
+  .toogleBtn {
+		background-color: white;
+		transition: all 0.5s linear;
+  }
+
+	.toogleBtnActive {
+    transform: rotate(90deg);
+		animation-fill-mode: forwards;
+	}
+}
