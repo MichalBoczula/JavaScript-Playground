@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bar {
+    height: 5px;
+    width: 35px;
+    background-color: rgb(49, 97, 209);
+}
+
+.bar:not(:last-of-type)
+{
+    margin-bottom: 7px;
+}
+
+.nav {
+    background-color: white;
+    color: rgb(66, 66, 66);
+    width: 0vw;
+    overflow: hidden;
+    position: fixed;
+    transition: all 0.5s linear;
+    height: 100vh;
+}
+
+.navActive {
+    width: 100vw;
+}
+
+body {
+    background-color: lightgray;
+    height: 200vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link,
+.socialLink {
+    padding: 10px;
+    padding-left: 20px;
+    transition: all 0.3s linear;
+}
+
+.link {
+    font-size: 1.2rem;
+}
+
+.socialLink,
+.brandSpan {
+    color: rgb(49, 97, 209);
+}
+
+.toogleBtn {
+    position: absolute;
+    z-index: 2;
+    padding: 20px;
+    display: grid;
+    width: 100px;
+    justify-content: flex-end;
+    transition: all 0.5s linear;
+}
+
+.brand {
+    padding: 20px;
+}
+
+.link:hover {
+    background-color: rgb(65, 113, 224);
+    color: white;
+    padding-left: 40px;
+    cursor: pointer;
+} 
+
+i:hover {
+    color:rgb(127, 160, 238);
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+i {
+    transition: all 0.3s linear;
+}
+
+.bar {
+    transition: all 0.3s linear;
+    border-radius: 2rem;
+}
+
+.toogleBtn {
+    animation: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: fixed;
+}
+
+.toogleBtnActive {
+    width: 300px;
+}
+
+.bar1Active {
+    transform: rotate(-45deg) translateY(7px);
+    width: 20px;
+}
+
+.bar3Active {
+    transform: rotate(45deg) translateY(-7px);
+    width: 20px;
+}
+
+.bar2Active {
+    transform: translateX(5px);
+}
+
+.toogleBtn:hover .bar{
+    background-color:rgb(127, 160, 238);
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 800px) {
+    .navActive {
+        width: 400px;
+    }
+}
+
+@media (max-width: 300px) {
+    .toogleBtnActive {
+        width: 300px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+    .toogleBtnActive {
+        width: 300px;
+    }
+}

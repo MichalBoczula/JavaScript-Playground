@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+}
+
+.mainContainerActive {
+    background-image: linear-gradient(90deg, rgba(28,193,255, 0.2) 0%, rgba(28,193,255, 0.2) 100%);
+}
+
+.modalSwitcher {
+    position: relative;
+    max-width: 50%;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.text {
+    padding-bottom: 20px;
+}
+
+.openBtn {
+    background-color: transparent;
+    border-color: rgb(238, 110, 25);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(238, 110, 25);
+    transition: all 0.3s linear;
+}
+
+.openBtn:hover {
+    background-color: rgb(238, 110, 25);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal {
+    width: 0vw;
+    height: 0vh;
+    overflow: hidden;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    transition: all 0.3s linear;
+}
+
+.modalActive {
+    width: 90vw;
+    height: 50vh;
+}
+
+.content {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.bar {
+    height: 5px;
+    width: 25px;
+    background-color: red;
+    border-radius: 10px;
+    transition: all 0.3 linear;
+}
+
+.bar1 {
+    transform: rotate(45deg);
+}
+
+.bar2 {
+    transform: rotate(-45deg) 
+        translateY(-4px)
+        translateX(3px);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.closeBtn:hover .bar{
+    background-color: rgb(255, 102, 0);
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .modalActive {
+        width: 70vw;
+        height: 50vh;
+    }
+}
